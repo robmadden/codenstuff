@@ -1,0 +1,77 @@
+{{!< default}}
+
+{{> nav}}
+
+{{#author}}
+  <section class="blog-header" {{#if cover}}style="background-image: url({{cover}})" {{else}}style="background-image: url({{@blog.cover}})" {{/if}}>
+    <div class="wrapper">
+      <div class="author js-animate non-visible animated" data-animate="zoomIn">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              {{#if image}}
+                <div class="center">
+                  <img src="{{image}}" alt="{{name}}'s Picture"/>
+                </div>
+              {{/if}}
+              <h1 class="name">{{name}}</h1>
+              <div class="bio">{{bio}}</div>
+              <ul class="author-meta clearfix">
+                {{#if location}}<li><span class="fa fa-map-marker"></span> {{location}}</li>{{/if}}
+                {{#if website}}<li><span class="fa fa-link"></span> <a href="{{website}}">{{website}}</a></li>{{/if}}
+                <li><span class="fa fa-rss"></span> <a href="{{url}}rss/" title="Subscribe to  My RSS">My RSS</a></li>
+                <li><span class="fa fa-pencil"></span> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{{/author}}
+
+<section class="posts">
+  <div class="container">
+    {{! Each post will be output using this markup }}
+    {{#foreach posts}}
+      <article class="{{post_class}} non-visible js-animate animated" data-animate="fadeInDown">
+        <div class="row">
+          <div class="col-xs-12 col-sm-2 post-meta">
+            <div class="datetime">
+              <div class="day">{{date format='DD'}}</div>
+              <div class="month-year">{{date format='MMM YYYY'}}</div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-10">
+            <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+            <div class="post-excerpt">
+                {{excerpt words="60"}}&hellip;
+            </div>
+            <div class="post-author">
+              <img src="{{author.image}}" alt="{{author.name}}"/>
+              <span class="post-author-name">{{author}}</span>
+              {{#if tags}}
+                <span class="fa fa-tags post-tags"></span>
+                {{tags separator=" &bull; "}}
+              {{/if}}
+            </div>
+            <div class="post-more">
+              <a class="read-more" href="{{url}}">Continue Read</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    {{/foreach}}
+  </div>
+</section>
+
+<section class="posts-pagination">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        {{!! After all the posts, we have the previous/next pagination links }}
+        {{pagination}}
+      </div>
+    </div>
+  </div>
+</section>

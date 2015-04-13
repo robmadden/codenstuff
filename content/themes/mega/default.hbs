@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    {{! Document Settings }}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="{{meta_description}}" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{! Page Meta }}
+  <title>{{meta_title}}</title>
+
+  <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{! Styles'n'Scripts }}
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:700,400" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/bootstrap.min.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/font-awesome.min.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/animate.min.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/showup.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/theme.css"}}" />
+
+  <link rel="alternate stylesheet" title="blue" type="text/css" href="{{asset "css/theme-blue.css"}}" />
+  <link rel="alternate stylesheet" title="green" type="text/css" href="{{asset "css/theme-green.css"}}" />
+  <link rel="alternate stylesheet" title="red" type="text/css" href="{{asset "css/theme-red.css"}}" />
+  <link rel="alternate stylesheet" title="yellow" type="text/css" href="{{asset "css/theme-yellow.css"}}" />
+  <link rel="alternate stylesheet" title="columbia-blue" type="text/css" href="{{asset "css/theme-columbia-blue.css"}}" />
+  <link rel="alternate stylesheet" title="dark-purple" type="text/css" href="{{asset "css/theme-dark-purple.css"}}" />
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script type="text/javascript" src="{{asset 'js/html5shiv.min.js'}}"></script>
+    <script type="text/javascript" src="{{asset 'js/respond.min.js'}}"></script>
+  <![endif]-->
+  <script type="text/javascript" src="{{asset "js/modernizr.min.js"}}"></script>
+</head>
+<body class="{{body_class}}">
+
+{{! Everything else gets inserted here }}
+{{{body}}}
+
+<footer class="blog-footer" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+  <div class="blog-section-overlay">
+    <a class="subscribe" href="{{@blog.url}}/rss/"><span class="fa fa-rss"></span></a>
+    <div class="inner">
+      <section>All content copyright <a href="{{@blog.url}}/">{{@blog.title}}</a> &copy; {{date format="YYYY"}} &bull; All rights reserved.</section>
+      <section>Theme By <a href="https://www.gtheme.io">GTheme</a></section>
+    </div>
+  </div>
+</footer>
+
+<a href="#" class="btn back-to-top btn-dark btn-fixed-bottom">
+  <span class="fa fa-chevron-up"></span>
+</a>
+{{! Ghost outputs important scripts and data with this tag }}
+{{ghost_foot}}
+
+{{! The main JavaScript file for theme }}
+<script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+<script type="text/javascript" src="{{asset "js/waypoints.min.js"}}"></script>
+<script type="text/javascript" src="{{asset "js/showup.js"}}"></script>
+<script type="text/javascript" src="{{asset "js/config.js"}}"></script>
+<script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+</body>

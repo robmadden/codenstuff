@@ -9,7 +9,7 @@ config = {
     // ### Development **(default)**
     development: {
         // The url to use when providing links to the site, E.g. in RSS and email.
-        url: 'https://www.codenstuff.info',
+        url: 'http://www.codenstuff.info',
 
         // Example mail config
         // Visit http://support.ghost.org/mail for instructions
@@ -48,13 +48,8 @@ config = {
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
     production: {
-        url: 'https://www.codenstuff.info',
-        mail: {
-	    transport: 'SMTP',
-	    options: {
-	        service: 'sendmail',
-	    }
-	},
+        url: 'http://www.codenstuff.info',
+        mail: {},
         database: {
             client: 'sqlite3',
             connection: {

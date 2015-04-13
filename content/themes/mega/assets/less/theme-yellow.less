@@ -1,0 +1,89 @@
+
+
+@color: #F3D42C;
+@dark-color: darken(@color, 10%);
+
+a {
+  color: @color;
+  &:hover,
+  &:focus {
+    color: @dark-color;
+  }
+}
+
+blockquote {
+  border-left: 5px solid @color;
+}
+
+.nav-top {
+  .nav {
+    a {
+      &:hover,
+      &:focus {
+        border-bottom: 3px solid @color;
+      }
+    }
+  }
+}
+
+
+.post-title {
+  a {
+    &:hover,
+    &:focus {
+      color: @dark-color;
+    }
+  }
+}
+
+.post-meta {
+  .datetime {
+    .day {
+      color: @color;
+    }
+  }
+}
+
+.post-author {
+  a {
+    &:hover,
+    &:focus {
+      color: @dark-color;
+    }
+  }
+}
+
+.post-more {
+  a {
+    background: @color;
+    &:hover,
+    &:focus {
+      background-color: @dark-color;
+    }
+  }
+}
+
+.page-tag {
+  span {
+    color: @color;
+  }
+}
+
+.older-posts,
+.newer-posts {
+  &:hover,
+  &:focus {
+    border-color: @dark-color;
+  }
+}
+
+.blog-footer {
+  background: @color no-repeat center center;
+}
+
+.btn-dark {
+  background-color: rgba(red(@color), green(@color), blue(@color),.5);
+}
+.btn-dark:hover {
+  background-color: rgba(red(@color), green(@color), blue(@color),.9);
+}

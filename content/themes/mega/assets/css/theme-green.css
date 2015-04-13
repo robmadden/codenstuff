@@ -1,0 +1,50 @@
+a {
+  color: #00ca92;
+}
+a:hover,
+a:focus {
+  color: #00976d;
+}
+blockquote {
+  border-left: 5px solid #00ca92;
+}
+.nav-top .nav a:hover,
+.nav-top .nav a:focus {
+  border-bottom: 3px solid #00ca92;
+}
+.post-title a:hover,
+.post-title a:focus {
+  color: #00976d;
+}
+.post-meta .datetime .day {
+  color: #00ca92;
+}
+.post-author a:hover,
+.post-author a:focus {
+  color: #00976d;
+}
+.post-more a {
+  background: #00ca92;
+}
+.post-more a:hover,
+.post-more a:focus {
+  background-color: #00976d;
+}
+.page-tag span {
+  color: #00ca92;
+}
+.older-posts:hover,
+.newer-posts:hover,
+.older-posts:focus,
+.newer-posts:focus {
+  border-color: #00976d;
+}
+.blog-footer {
+  background: #00ca92 no-repeat center center;
+}
+.btn-dark {
+  background-color: rgba(0, 202, 146, 0.5);
+}
+.btn-dark:hover {
+  background-color: rgba(0, 202, 146, 0.9);
+}
