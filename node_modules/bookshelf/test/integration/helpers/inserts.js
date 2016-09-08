@@ -73,6 +73,10 @@ module.exports = function(bookshelf) {
       site_id: 2,
       first_name: 'Ron',
       last_name: 'Burgundy'
+    },{
+      site_id: 99,
+      first_name: 'Anonymous',
+      last_name: null
     }]),
 
     knex('posts').insert([{
@@ -177,6 +181,38 @@ module.exports = function(bookshelf) {
       url: 'https://www.google.com/images/srpr/logo4w.png',
       imageable_id: 2,
       imageable_type: 'sites'
+    }]),
+
+    knex('thumbnails').insert([{
+      caption: 'Lorem ipsum Quis Ut eu nostrud ea sint aute non aliqua ut ullamco cupidatat exercitation nisi nisi.',
+      url: 'https://www.google.com/images/srpr/logo4w.png',
+      ImageableId: 1,
+      ImageableType: 'authors'
+    }, {
+      caption: 'Lorem ipsum Quis Ut eu nostrud ea sint aute non aliqua ut ullamco cupidatat exercitation nisi nisi.',
+      url: 'https://www.google.com/images/srpr/logo4w.png',
+      ImageableId: 2,
+      ImageableType: 'authors'
+    }, {
+      caption: 'Lorem ipsum Quis Ut eu nostrud ea sint aute non aliqua ut ullamco cupidatat exercitation nisi nisi.',
+      url: 'https://www.google.com/images/srpr/logo4w.png',
+      ImageableId: 1,
+      ImageableType: 'sites'
+    }, {
+      caption: 'Lorem ipsum Quis Ut eu nostrud ea sint aute non aliqua ut ullamco cupidatat exercitation nisi nisi.',
+      url: 'https://www.google.com/images/srpr/logo4w.png',
+      ImageableId: 1,
+      ImageableType: 'sites'
+    }, {
+      caption: 'Lorem ipsum Quis Ut eu nostrud ea sint aute non aliqua ut ullamco cupidatat exercitation nisi nisi.',
+      url: 'https://www.google.com/images/srpr/logo4w.png',
+      ImageableId: 2,
+      ImageableType: 'sites'
+    }, {
+      caption: 'Lorem ipsum Quis Ut eu nostrud ea sint aute non aliqua ut ullamco cupidatat exercitation nisi nisi.',
+      url: 'https://www.google.com/images/srpr/logo4w.png',
+      ImageableId: 2,
+      ImageableType: 'sites'
     }]),
 
     knex('users').insert({uid: 1, username: 'root'}),
