@@ -7,7 +7,7 @@ $(function() {
 
   $(".post-content img:first").each(function() {
     var src = $(this).attr("src");
-    $(".blog-header").css("background-image", "url(" + src + ")");
+    //$(".blog-header").css("background-image", "url(" + src + ")");
   });
 
     // scroll up plugin
